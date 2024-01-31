@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-  before_action :authenticate_admin!, except: [:index, :show]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -30,7 +29,7 @@ class ProductsController < ApplicationController
   end
 
   def update
-    
+
   end
 
   def destroy
