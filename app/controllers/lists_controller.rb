@@ -1,5 +1,4 @@
 class ListsController < ApplicationController
-    before_action :authentificate_admin!, except: [:index, :show]
     before_action :set_list, only: [:show, :edit, :update, :destroy]
 
     def index
