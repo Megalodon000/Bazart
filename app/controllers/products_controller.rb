@@ -26,11 +26,16 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    @product = Product.find(params[:id])
+    if @product.update(product_params)
+      flash[:success] = "Product Updated Successfully"
+      redirect_to "/products/#{product.id}"
+    else
+      flash[:warning] = "Product Not Updated"
+      redirect_to "/products/#{product.id}/edit"
+    end
   end
 
   def update
-    
   end
 
   def destroy
@@ -48,5 +53,4 @@ class ProductsController < ApplicationController
   def product_params
     params.require(:product).permit(:title, :price, :description, :collection, :material, :color)
   end
-
 end
