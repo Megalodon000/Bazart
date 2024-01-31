@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :products
-  has_many :lists
+  has_many :owner_products, foreign_key: "craftman_id"
+  has_many :lists, foreign_key: "client_id"
+  has_many :client_products, through: :lists
 end

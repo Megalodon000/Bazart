@@ -15,13 +15,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_30_151628) do
   enable_extension "plpgsql"
 
   create_table "lists", force: :cascade do |t|
-    t.bigint "user_id", null: false
+    t.integer "client_id"
     t.bigint "product_id", null: false
     t.boolean "likes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_lists_on_product_id"
-    t.index ["user_id"], name: "index_lists_on_user_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -31,6 +30,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_30_151628) do
     t.string "collection"
     t.string "material"
     t.string "color"
+    t.integer "craftman_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "review_id", null: false
@@ -61,8 +61,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_30_151628) do
   end
 
   add_foreign_key "lists", "products"
-  add_foreign_key "lists", "users"
+  add_foreign_key "lists", "users", column: "client_id"
   add_foreign_key "products", "reviews"
+  add_foreign_key "products", "users", column: "craftman_id"
   add_foreign_key "reviews", "products"
   add_foreign_key "reviews", "users"
 end
