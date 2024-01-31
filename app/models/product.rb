@@ -7,5 +7,7 @@ class Product < ApplicationRecord
   validates :color, presence: true
 
   has_many :reviews
-
+  belongs_to :craftman, class_name: "User", foreign_key: "craftman_id"
+  has_many :lists
+  has_many :clients, through: :lists, class_name: "User", foreign_key: "client_id"
 end
