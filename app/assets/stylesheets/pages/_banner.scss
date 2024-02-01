@@ -21,3 +21,33 @@
   padding-top: 5vh;
   padding-bottom: 3vh;
 }
+.dic-mor-btn{
+  font-family: 'Abhaya Libre', serif;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: 1px solid rgb(0, 0, 0);
+  width: 20vh;
+  margin: 0 auto; /* Center the button horizontally */
+  display: block; /* Make the button a block-level element */
+  align-items: center;
+}
+
+
+.btn-aboutus{
+  a{
+  font-family: 'Abhaya Libre', serif;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: 1px solid rgb(0, 0, 0);
+  width: 20vh;
+  margin: 0 auto; /* Center the button horizontally */
+  display: block; /* Make the button a block-level element */
+  align-items: center;
+  justify-items: center;
+  display: flex;
+}
+}
