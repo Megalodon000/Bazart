@@ -3,6 +3,14 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+
+    if params[:collection].present?
+      @products = @products.where(collection: params[:collection])
+    elsif params[:material].present?
+      @products = @products.where(material: params[:material])
+    elsif params[:color].present?
+      @products = @products.where(color: params[:color])
+    end 
   end
 
   def show
