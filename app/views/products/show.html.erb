@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="category">
+        <h1><%= @product.category.name %></h1>
+    </div>
+    <div class="product_info">
+        <div class="image">
+            <%= image_tag @product.image.url(:medium) %>
+        </div>
+        <div class="description">
+            <div class="scroll">
+                <div class="category-container">
+                    <div ngbdropdown class="category-container_select dropdown">
+                        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbdropdowntoggle>
+                            <span class="name">Material:</span>
+                            <span class="value">Pottery</span>
+                            ::after
+                        </button>
+                    </div>
+                    <div ngbdropdown class="category-container_select dropdown">
+                        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbdropdowntoggle>
+                            <span class="name">Collection:</span>
+                            <span class="value">Pots</span>
+                            ::after
+                        </button>
+                    </div>
+                    <div ngbdropdown class="category-container_select dropdown">
+                        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbdropdowntoggle>
+                            <span class="name">Color:</span>
+                            <span class="value">Silver</span>
+                            ::after
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <h2><%= @product.name %></h2>
+            <p><%= @product.description %></p>
+            <p><%= number_to_currency @product.price %></p>
+        </div>
+    </div>
+    <div class="buttons-container_button">
+        <button class="btn btn-outline-primary">Find retailer</button>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="footer">
+            <div class="footer_logo">
+                <img src="assets/images/logo.png" alt="logo">
+            </div>
+            <div class="footer_menu">
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer_social">
+                <ul>
+                    <li><a href="#"><img src="assets/images/facebook.png" alt="facebook"></a></li>
+                    <li><a href="#"><img src="assets/images/twitter.png" alt="twitter"></a></li>
+                    <li><a href="#"><img src="assets/images/instagram.png" alt="instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
