@@ -6,6 +6,10 @@ class Product < ApplicationRecord
   validates :material, presence: true
   validates :color, presence: true
 
+  COLLECTION = %w(chairs tables lamps shelves desks pots sofas chandeliers vases jewelry)
+  MATERIAL = %w(Gold Silver Bronze glass wood plastic pottery clay marble plaster aluminum)
+  COLOR = %w(Red Blue Green Yellow Black White Purple Brown)
+
   has_many :reviews
   belongs_to :craftman, class_name: "User", foreign_key: "craftman_id"
   has_many :lists
