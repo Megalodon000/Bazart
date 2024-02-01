@@ -1,6 +1,6 @@
 <%= link_to "add Product", new_product_path(@product), class:"btn btn-primary" %>
 <% @products.each do |product| %>
-  <p>Product Name: <%= product.title %></p>
+  <p>Product Name: <%=link_to product.title, product %></p>
   <p>Description: <%= product.description %></p>
   <p>Price: <%= product.price %></p>
   <p>Craftman ID: <%= product.craftman_id %></p>

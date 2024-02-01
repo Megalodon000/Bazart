@@ -1,10 +1,10 @@
 <div class="container">
     <div class="category">
-        <h1><%= @product.category.name %></h1>
+        <h1><%= @product.collection %></h1>
     </div>
     <div class="product_info">
         <div class="image">
-            <%= image_tag @product.image.url(:medium) %>
+
         </div>
         <div class="description">
             <div class="scroll">
@@ -32,7 +32,7 @@
                     </div>
                 </div>
             </div>
-            <h2><%= @product.name %></h2>
+            <h2><%= @product.title %></h2>
             <p><%= @product.description %></p>
             <p><%= number_to_currency @product.price %></p>
         </div>
