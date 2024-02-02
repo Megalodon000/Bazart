@@ -37,42 +37,9 @@
     scale: 1;
     opacity: 1;
   }
+  .card:hover .content p{
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-
-}
-
-.eth-main-banner__square {
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  background-color: #f8f9fa;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.eth-main-banner__title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.text-black {
-  color: #343a40;
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.eth-main-banner__link {
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  background-color: #000000;
-  color: #ffffff;
-  border-radius: 7px;
-  padding: 10px 20px;
-  display: inline-block;
-}
-
-.eth-main-banner__link:hover {
-  border: 1px solid #000000;
-  background-color: #ffffff;
 }
