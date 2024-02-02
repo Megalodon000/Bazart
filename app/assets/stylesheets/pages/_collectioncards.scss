@@ -76,3 +76,47 @@
   border: 1px solid #000000;
   background-color: #ffffff;
 }
+
+.text-center {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.text-center .mt-3 {
+  width: 400px;
+  height: 100%;
+  background-color: #EAE9E7;
+  display: grid;
+  place-items: center;
+}
+.text-center .info {
+  font-size: 20px;
+  margin-bottom: 20px;
+  height: 100%;
+  padding: 125px 0;
+}
+
+.text-center img {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.btn-1{
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 7px;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.btn-1:hover {
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+}
