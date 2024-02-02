@@ -14,4 +14,6 @@ class Product < ApplicationRecord
   belongs_to :craftman, class_name: "User", foreign_key: "craftman_id"
   has_many :lists
   has_many :clients, through: :lists, class_name: "User", foreign_key: "client_id"
+
+  has_one_attached :photo
 end

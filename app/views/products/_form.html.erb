@@ -5,6 +5,7 @@
 <%= f.select :collection,  collection: Product::COLLECTION %>
 <%= f.select :material,  collection: Product::MATERIAL %>
 <%= f.select :color,  collection: Product::COLOR %>
+<%= f.input :photo, as: :file %>
 <%= f.submit %>
 
 <% end %>
