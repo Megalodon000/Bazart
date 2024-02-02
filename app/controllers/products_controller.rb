@@ -14,13 +14,11 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-
+    @product.craftman = current_user
     if @product.save!
-      flash[:success] = "Product Created Successfully"
-      redirect_to "/products/#{product.id}"
+      redirect_to product_path(@product.id)
     else
-      flash[:warning] = "Product Not Created"
-      redirect_to "/products/new"
+      render "new", status: :unprocessable_entity
     end
   end
 

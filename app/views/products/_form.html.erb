@@ -1,0 +1,10 @@
+<%= simple_form_for @product do |f| %>
+<%= f.input :title %>
+<%= f.input :description %>
+<%= f.input :price %>
+<%= f.select :collection,  collection: Product::COLLECTION %>
+<%= f.select :material,  collection: Product::MATERIAL %>
+<%= f.select :color,  collection: Product::COLOR %>
+<%= f.submit %>
+
+<% end %>

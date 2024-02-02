@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="category">
+        <h1><%= @product.collection.capitalize  %></h1>
+    </div>
+    <div class="product_info">
+        <div class="image">
+            
+        </div>
+        <div class="description">
+            <div class="scroll">
+                <div class="category-container">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Collection
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Chairs</a>
+                            <a class="dropdown-item" href="#">Desks</a>
+                            <a class="dropdown-item" href="#">Carpets</a>
+                        </div>
+                        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Material
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Pottery</a>
+                            <a class="dropdown-item" href="#">Wood</a>
+                            <a class="dropdown-item" href="#">Metal</a>
+                        </div>
+                        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Color
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Green</a>
+                            <a class="dropdown-item" href="#">Gold</a>
+                            <a class="dropdown-item" href="#">Green</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2><%= @product.title %></h2>
+            <p><%= @product.description %></p>
+            <p><%= number_to_currency @product.price %></p>
+            <button class="btn btn-outline-primary">Find artisan</button>
+        </div>
+    </div>
+</div>
