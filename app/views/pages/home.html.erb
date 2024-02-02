@@ -11,18 +11,17 @@
 
 </div>
 <div id="collection-cards" class="d-flex justify-content-center ">
-<% @collections.each do |collection| %>
-<%= link_to products_path(collection: collection) do %>
-      <div class="card">
-      <div class="image-box">
-         <img src="https://api.cy0e40h2m3-ethnicraf1-p1-public.model-t.cc.commerce.ondemand.com/medias/Bok-chair-solid-oak-Ethnicraft.jpg?context=bWFzdGVyfGltYWdlc3wyOTk2MTN8aW1hZ2UvanBlZ3xoMjIvaDM0Lzg5NDQxMjEzODA4OTQvQm9rX2NoYWlyX3NvbGlkX29ha19FdGhuaWNyYWZ0LmpwZ3w2MDIxMWRlNWIyMDYxZTljZWJmYjkwNzY1ZTUxOTI0MDYyMGY0YzBlYWI1Y2QxMzYxN2I0MGIzNGYzMTAxZTgw" alt="">
-         <div class="content">
-      <h2><%= collection %></h2>
-      </div>
-      </div>
+    <% @collections.each do |collection| %>
+    <%= link_to products_path(collection: collection) do %>
+          <div class="card m-4">
+            <div class="image-box">
+              <img src="https://api.cy0e40h2m3-ethnicraf1-p1-public.model-t.cc.commerce.ondemand.com/medias/Bok-chair-solid-oak-Ethnicraft.jpg?context=bWFzdGVyfGltYWdlc3wyOTk2MTN8aW1hZ2UvanBlZ3xoMjIvaDM0Lzg5NDQxMjEzODA4OTQvQm9rX2NoYWlyX3NvbGlkX29ha19FdGhuaWNyYWZ0LmpwZ3w2MDIxMWRlNWIyMDYxZTljZWJmYjkwNzY1ZTUxOTI0MDYyMGY0YzBlYWI1Y2QxMzYxN2I0MGIzNGYzMTAxZTgw" alt="">
+          </div>
+          <div class="content">
+          </div>
+          <% end %>
+    </div>
 
-      </div>
-<% end %>
 <% end %>
 </div>
 <div class="container mt-5">
