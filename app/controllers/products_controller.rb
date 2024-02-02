@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
       @products = @products.where(material: params[:material])
     elsif params[:color].present?
       @products = @products.where(color: params[:color])
-    end 
+    end
   end
 
   def show
@@ -57,6 +57,6 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:title, :price, :description, :collection, :material, :color)
+    params.require(:product).permit(:title, :price, :description, :collection, :material, :color, :photo)
   end
 end

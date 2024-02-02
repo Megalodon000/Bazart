@@ -13,7 +13,7 @@
 <% @products.each do |product| %>
 <%= link_to product do %>
 <div class="card-trip text-dark">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+ <%= cl_image_tag product.photo.key, height: 300, width: 400, crop: :fill %>
   <div class="card-trip-infos">
     <div>
       <h2><%= product.title %></h2>
