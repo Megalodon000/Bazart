@@ -1,7 +1,19 @@
+<div class="container">
 <%= link_to "add Product", new_product_path(@product), class:"btn btn-primary" %>
+
+<%= form_tag(products_path, method: "get") do %>
+  <%= select_tag :collection, options_for_select(Product.pluck(:collection).uniq, params[:collection]), include_blank: true %>
+  <%= select_tag :material, options_for_select(Product.pluck(:material).uniq, params[:material]), include_blank: true %>
+  <%= select_tag :color, options_for_select(Product.pluck(:color).uniq, params[:color]), include_blank: true %>
+  <%= submit_tag "Filter" %>
+<% end %>
+
+
+
 <% @products.each do |product| %>
   <p>Product Name: <%=link_to product.title, product %></p>
   <p>Description: <%= product.description %></p>
   <p>Price: <%= product.price %></p>
   <p>Craftman ID: <%= product.craftman_id %></p>
 <% end %>
+</div>
