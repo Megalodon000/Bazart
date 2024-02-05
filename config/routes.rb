@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/index'
+  get 'users/show'
   root to: "pages#home"
 
   devise_for :users
@@ -10,4 +12,6 @@ Rails.application.routes.draw do
   get "about" => "pages#about", as: :about
   # Defines the root path route ("/")
   # root "posts#index"
+
+  resources :users, only: [:index, :show]
 end

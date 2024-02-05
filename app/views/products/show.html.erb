@@ -40,7 +40,8 @@
             <h2><%= @product.title %></h2>
             <p><%= @product.description %></p>
             <p><%= number_to_currency @product.price %></p>
-            <button class="btn btn-outline-dark">Find artisan</button>
+
+            <%= link_to "Find artisan", user_path(@product.craftman), class:"btn btn-outline-dark" %>
         </div>
     </div>
 </div>
