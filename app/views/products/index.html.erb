@@ -1,13 +1,13 @@
 <div class="d-flex">
 <div class="user-info  border border-right border-danger ">
-    <%= current_user.email %>
+
 
 </div>
 
 <div class="container">
 <div class="d-flex justify-content-between ">
 <% if current_user %>
-<%= link_to "add Product", new_product_path(@product), class:"button-6" %>
+<%= link_to "add ali", new_product_path(@product), class:"button-6" %>
 <% end %>
 <%= form_tag(products_path, method: "get", class:"d-flex align-items-center") do %>
   <%= select_tag :collection, options_for_select(Product.pluck(:collection).uniq, params[:collection]), include_blank: true, class:"select" %>
