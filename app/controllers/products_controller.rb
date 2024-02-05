@@ -5,6 +5,10 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
 
+    if params[:search].present?
+      @products = @products.where("title ILIKE ?", "%#{params[:search]}%")
+    end
+
     if params[:collection].present?
       @products = @products.where(collection: params[:collection])
     elsif params[:material].present?
@@ -49,6 +53,7 @@ class ProductsController < ApplicationController
     @product = Product.destroy
     redirect_to "/products"
   end
+
 
 
   private
