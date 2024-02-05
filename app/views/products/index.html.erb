@@ -1,14 +1,23 @@
+<div class="d-flex">
+<div class="user-info  border border-right border-danger ">
+    <%= current_user.email %>
+
+</div>
+
 <div class="container">
-<%= link_to "add Product", new_product_path(@product), class:"btn btn-primary" %>
-
-<%= form_tag(products_path, method: "get") do %>
-  <%= select_tag :collection, options_for_select(Product.pluck(:collection).uniq, params[:collection]), include_blank: true %>
-  <%= select_tag :material, options_for_select(Product.pluck(:material).uniq, params[:material]), include_blank: true %>
-  <%= select_tag :color, options_for_select(Product.pluck(:color).uniq, params[:color]), include_blank: true %>
-  <%= submit_tag "Filter" %>
+<div class="d-flex justify-content-between ">
+<% if current_user %>
+<%= link_to "add Product", new_product_path(@product), class:"button-6" %>
 <% end %>
+<%= form_tag(products_path, method: "get", class:"d-flex align-items-center") do %>
+  <%= select_tag :collection, options_for_select(Product.pluck(:collection).uniq, params[:collection]), include_blank: true, class:"select" %>
+  <%= select_tag :material, options_for_select(Product.pluck(:material).uniq, params[:material]), include_blank: true, class:"select" %>
+  <%= select_tag :color, options_for_select(Product.pluck(:color).uniq, params[:color]), include_blank: true, class:"select" %>
+  <%= submit_tag "Filter" , class:"btn btn-light h-100 " %>
+<% end %>
+</div>
 
-<div class="d-flex justify-content-center ">
+<div class="d-flex justify-content-center mt-3">
 <div id="cards">
 <% @products.each do |product| %>
 <%= link_to product do %>
@@ -20,12 +29,13 @@
       <p><%= product.description %></p>
     </div>
     <h2 class="card-trip-pricing"><%= product.price %> dh </h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    <%= cl_image_tag product.craftman.photo.key, class: "card-trip-user avatar-bordered" %>
     </div>
 
   </div>
   <% end %>
   <% end %>
+</div>
 </div>
 </div>
 </div>
