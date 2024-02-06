@@ -129,3 +129,22 @@ video {
   height: auto;
   object-fit: cover;
 }
+
+.card {
+  position: relative;
+}
+
+.card-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.card:hover .card-title {
+  visibility: visible;
+  opacity: 1;
+}

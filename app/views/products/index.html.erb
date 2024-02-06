@@ -1,19 +1,15 @@
-<div class="d-flex">
-<div class="user-info  border border-right border-danger ">
-    <%= current_user.email %>
-
-</div>
 
 <div class="container">
-<div class="d-flex justify-content-between ">
-<% if current_user %>
-<%= link_to "add Product", new_product_path(@product), class:"button-6" %>
-<% end %>
+<div class="d-flex justify-content-end  ">
+
 <%= form_tag(products_path, method: "get", class:"d-flex align-items-center") do %>
   <%= select_tag :collection, options_for_select(Product.pluck(:collection).uniq, params[:collection]), include_blank: true, class:"select" %>
   <%= select_tag :material, options_for_select(Product.pluck(:material).uniq, params[:material]), include_blank: true, class:"select" %>
   <%= select_tag :color, options_for_select(Product.pluck(:color).uniq, params[:color]), include_blank: true, class:"select" %>
-  <%= submit_tag "Filter" , class:"btn btn-light h-100 " %>
+  <%= submit_tag "Filter" , class:"button-6 m-2" %>
+  <% if current_user %>
+<%= link_to "Add Product", new_product_path(@product), class:"button-6 mr-5" %>
+<% end %>
 <% end %>
 </div>
 
@@ -35,7 +31,6 @@
   </div>
   <% end %>
   <% end %>
-</div>
 </div>
 </div>
 </div>
