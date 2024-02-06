@@ -5,12 +5,15 @@
     background-color:#ffffff;
     border-top: 1px solid rgb(117, 115, 115);
     padding-bottom: 0%;
+    padding-top: 0%;
   }
   
+  .row {
+    margin-bottom: 0%;
+  }
   .footer-dark h3 {
     font-family: 'Caveat', cursive;
-    margin-top:0;
-    margin-bottom:12px;
+    margin-top:5vh;
     font-weight:bold;
     font-size:40px;
   }
@@ -81,6 +84,18 @@
     color:#000000;
     opacity:0.75;
   }
+
+  .col-md-6 img h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .col-md-6 img {
+    margin-right: 0.75rem;
+    height: 38px;
+    border-radius: 3px;
+  }
   
   .footer-dark .item.social > a:hover {
     opacity:0.9;
@@ -89,7 +104,7 @@
   .footer-dark .copyright {
     text-align:center;
     padding-top:24px;
-    opacity:0.3;
-    font-size:13px;
+    font-size:14px;
     margin-bottom:0;
+    color: rgb(255, 0, 0);
   }
