@@ -1,6 +1,6 @@
 .container {
-    margin-top: 20px;
-    margin-bottom: 20px;
+   margin-top: 20px;
+   margin-bottom: 20px;
 }
  .category {
     font-family: 'Courier New', Courier, monospace;
@@ -12,12 +12,11 @@
     padding-bottom: 3vh;
  }
 
-
  .category-container .dropdown{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 20px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin-bottom: 20px;
  }
 .product_info {
     display: flex;
