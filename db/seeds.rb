@@ -1,3 +1,4 @@
+List.destroy_all
 Product.destroy_all
 User.destroy_all
 def generate_moroccan_firstname
@@ -24,7 +25,7 @@ user1 = User.create(
   email: 'john.doe@example.com',
   first_name: generate_moroccan_firstname,
   last_name: generate_moroccan_lastname,
-  address: '123 Main St',
+  address: 'rabat agdal',
   phone_number: '555-1234',
   password: 'password'
 )
@@ -34,7 +35,7 @@ user2 = User.create(
   email: 'jane.smith@example.com',
   first_name: generate_moroccan_firstname,
   last_name: generate_moroccan_lastname,
-  address: '456 Oak Ave',
+  address: '380 bouvard roudani casablanca',
   phone_number: '555-5678',
   password: 'password'
 )
@@ -45,7 +46,7 @@ user3 = User.create(
   email: 'alex.johnson@example.com',
   first_name: generate_moroccan_firstname,
   last_name: generate_moroccan_lastname,
-  address: '789 Elm St',
+  address: 'Place Jemaa el fna Marrakech',
   phone_number: '555-9012',
   password: 'password'
 )
