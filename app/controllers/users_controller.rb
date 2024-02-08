@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     @markers = @users.geocoded.map do |user|
       {
         lat: user.latitude,
-        lng: user.longitude,
+        lng: user.longitude
       }
     end
   end

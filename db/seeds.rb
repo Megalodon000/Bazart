@@ -1,3 +1,4 @@
+List.destroy_all
 Product.destroy_all
 User.destroy_all
 def generate_moroccan_firstname
