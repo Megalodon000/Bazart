@@ -1,3 +1,4 @@
+List.destroy_all
 Product.destroy_all
 User.destroy_all
 def generate_moroccan_firstname
@@ -8,6 +9,21 @@ end
 def generate_moroccan_lastname
   last_names = ['Benali', 'El Amrani', 'Chakir', 'Lamrani', 'Kadiri', 'El Fassi', 'Nouri', 'Tazi', 'Bouazza', 'Bensaid']
   last_names.sample
+end
+
+def collection_select
+collections = %w(chairs tables lamps shelves desks pots sofas chandeliers vases jewelry)
+collections.sample
+end
+
+def material_select
+  materials = %w(Gold Silver Bronze glass wood plastic pottery clay marble plaster aluminum)
+  materials.sample
+end
+
+def color_select
+  colors = %w(Red Blue Green Yellow Black White Purple Brown)
+  colors.sample
 end
 
 def attach_image(model, image_url)
@@ -58,9 +74,9 @@ attach_image(user3, 'https://source.unsplash.com/300x300/?portrait')
     title: "Product #{i + 1}",
     description: "Description for Product #{i + 1}",
     price: rand(50..500),
-    collection: "Collection #{i + 1}",
-    material: "Material #{i + 1}",
-    color: "Color #{i + 1}",
+    collection: collection_select ,
+    material: material_select,
+    color: color_select,
     craftman_id: User.all.sample.id
   )
   attach_image(p, "https://source.unsplash.com/random/900%C3%97700/?product")
