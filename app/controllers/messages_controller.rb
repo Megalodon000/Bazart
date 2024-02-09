@@ -4,18 +4,18 @@ class MessagesController < ApplicationController
         @message = Message.new(message_params)
         @message.chatroom = @chatroom
         @message.user = current_user
-        
+
         @message.save
         ChatroomChannel.broadcast_to(
           @chatroom,
           render_to_string(
-            partial: "messages/message", 
+            partial: "messages/message",
             locals: { message: @message }
           )
         )
-        head :ok
+        redirect_to user_path(@chatroom.artisan_id)
       end
-    
+
     private
 
     def message_params
