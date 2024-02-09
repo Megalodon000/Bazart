@@ -17,7 +17,7 @@
 <div id="cards">
 <% @products.each do |product| %>
 <%= link_to product do %>
-<div class="card-trip text-dark">
+<div class="card-trip text-dark" style="height:310px;">
  <%= cl_image_tag product.photo.key, height: 300, width: 400, crop: :fill %>
   <div class="card-trip-infos">
     <div>
@@ -27,7 +27,7 @@
     <h2 class="card-trip-pricing"><%= product.price %> dh </h2>
     <%= cl_image_tag product.craftman.photo.key, class: "card-trip-user avatar-bordered" %>
     </div>
-           
+
   </div>
   <% end %>
   <% end %>

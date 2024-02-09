@@ -9,6 +9,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.1]
       t.string :last_name
       t.string :address
       t.string :phone_number
+      t.float :latitude
+      t.float :longitude
       t.string :encrypted_password, null: false, default: ""
 
       ## Recoverable
