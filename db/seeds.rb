@@ -57,7 +57,8 @@ user1 = User.create(
   last_name: generate_moroccan_lastname,
   address: 'rabat agdal',
   phone_number: '555-1234',
-  password: 'password'
+  password: 'password',
+  nickname: 'john12'
 )
 attach_image(user1, 'https://source.unsplash.com/300x300/?portrait')
 
@@ -67,7 +68,8 @@ user2 = User.create(
   last_name: generate_moroccan_lastname,
   address: '380 bouvard roudani casablanca',
   phone_number: '555-5678',
-  password: 'password'
+  password: 'password',
+  nickname: 'jane15'
 )
 attach_image(user2, 'https://source.unsplash.com/300x300/?portrait')
 
@@ -78,7 +80,8 @@ user3 = User.create(
   last_name: generate_moroccan_lastname,
   address: 'Place Jemaa el fna Marrakech',
   phone_number: '555-9012',
-  password: 'password'
+  password: 'password',
+  nickname: 'alex20'
 )
 attach_image(user3, 'https://source.unsplash.com/300x300/?portrait')
 
