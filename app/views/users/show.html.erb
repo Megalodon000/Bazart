@@ -1,5 +1,5 @@
 <div class="d-flex w-100">
-  <aside class="sidebar">
+  <aside class="sidebar" style="margin: 10px; width:30%">
     <div class="profile">
       <%= cl_image_tag @user.photo.key, class: "img-fluid", style: "margin-bottom: 10px;" %>
       <h3 class="name"><%= @user.first_name %> <%= @user.last_name %></h3>
@@ -25,10 +25,8 @@
     <ul>
       <li class="active"><a href="#"><span class="fas fa-home mr-3"></span> Feed</a></li>
       <li><a href="#"><span class="fas fa-search mr-3"></span> Explore</a></li>
-      <li><a href="#"><span class="fas fa-bell mr-3"></span> Notifications</a></li>
       <li><a href="#"><span class="fas fa-location-arrow mr-3"></span> Direct</a></li>
       <li><a href="#"><span class="fas fa-chart-pie mr-3"></span> Stats</a></li>
-      <li><a href="#"><span class="fas fa-sign-out-alt mr-3"></span> Sign out</a></li>
     </ul>
   </aside>
 
