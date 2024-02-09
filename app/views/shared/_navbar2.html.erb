@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" style="position:sticky; background:white;">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "https://res.cloudinary.com/dt9msp03i/image/upload/v1706870173/logo_black_ktju2o.png" %>
     <% end %>
 
@@ -26,9 +26,7 @@
       </form>
         <% if user_signed_in? %>
           <div class="nav-item dropdown ps-3">
-          <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= cl_image_tag current_user.photo.key, class: "avatar", alt: "dropdown menu" %>
-          </a>
+          <a class="nav-link" href="#" data-bs-toggle="dropdown"><%= current_user.nickname %></a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Action", "#", class: "dropdown-item" %>
               <%= link_to "Another action", "#", class: "dropdown-item" %>

@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   resources :lists, only: [:index, :show, :new, :create, :destroy]
+  resources :chatrooms, only: [:show] do
+    resources :messages, only: [:create]
+  end
 
   get "up" => "rails/health#show", as: :rails_health_check
   get "about" => "pages#about", as: :about
