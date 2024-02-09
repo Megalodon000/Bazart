@@ -1,4 +1,10 @@
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baz'art - About Us</title>
+  <style>
     body {
       font-family: 'Arial', sans-serif;
       background-color: #f8f8f8;
@@ -10,32 +16,41 @@
     h1, h2 {
       text-align: center;
       margin: 20px 0;
+      font-weight: bold;
+      text-shadow: 2px 2px #F8F8FF;
+    }
+
+    h2 {
+      color: #656463;
+      text-shadow: 2px 2px #F8F8FF
     }
 
     .about-container {
       text-align: center;
       color: #888;
       padding: 20px;
-      background-color: #fff;
+      background-image: url('https://img.freepik.com/photos-gratuite/tailleur-creatif-travaillant-atelier_23-2148970727.jpg?w=740&t=st=1707470927~exp=1707471527~hmac=e9a0bdbfadb4eb6416437f143a14c4b93a8d93128ab01adbac35b8cbf44d8c53');
+      background-size: cover;
+      background-position: center;
       margin: 20px auto;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    h1 {
-      font-weight: bold;
-      color: #555;
+    .about-container .description {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.5em;
+      margin: 0 auto;
+      padding: 1em;
+      background-color: rgba(255, 255, 255, 0.6); /* Ajoute un fond blanc semi-transparent */
+      border-radius: 10px;
     }
 
-    h2 {
-      color: #555;
-    }
-
-    /* Team Section Styles */
     .team-container {
       text-align: center;
-      padding: 20px;
-      background-color: #fff;
-      margin: 20px auto;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.6);
+      margin: 30px auto;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
@@ -45,20 +60,13 @@
       color: #333;
     }
 
-  .description {
-     font-size: 18px;
-     color: #333;
-     line-height: 1.5em;
-     margin: 0 0 1em;
-     padding: 1em;
-  }
     .team-member {
       margin-top: 20px;
     }
 
     .team-image img {
-      width: 80px;
-     height: 80px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
     }
 
@@ -95,40 +103,55 @@
       line-height: 30px;
       color: #fff;
     }
+
    .partners-section {
-    text-align: center;
-    margin: 20px auto;
-  }
+  text-align: center;
+  margin: 20px auto;
+}
 
-  .partner {
-    margin-bottom: 30px;
-  }
+.partners-section h2 {
+  font-weight: bold;
+  color: #333;
+}
 
-  .partner img {
-    max-width: 200px;
-    height: auto;
-  }
+.partner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-  .welcome{
-    text-align: center;
-    padding: 20px;
-    background-color: #f8f8f8;
-    margin: 20px auto;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  .partner h3 {
-    margin-top: 10px;
-    font-size: 1.5rem;
-    color: #333;
-  }
+.partner {
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-  .partner p {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #666;
-  }
+.partner img {
+  max-width: 100px;
+  height: auto;
+}
+
+.partner-info {
+  margin-top: 20px;
+}
+
+.partner-info h3 {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.partner-info p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
   </style>
-
+</head>
+<body>
   <div class="about-container">
     <h1>About us</h1>
     <div class="description">_____________________________________________<br><br>
@@ -138,7 +161,7 @@
     <h2 class="welcome">Welcome to Baz'art, where the beauty of handmade products is celebrated and cherished.</h2>
   </div>
 
-  <!-- Team Section -->
+   <!-- Team Section -->
   <div class="team-container">
     <div class="section-title">
       <h2>Our Team</h2>
