@@ -16,5 +16,12 @@ class UsersController < ApplicationController
       lat: @user.latitude,
       lng: @user.longitude
     }]
+    @chatroom = Chatroom.find_by(artisan_id: @user.id, client_id: current_user.id)
+    @message = Message.new
+      if @chatroom.nil?
+        @chatroom = Chatroom.create(artisan_id: @user.id, client_id: current_user.id)
+      end
   end
+
+
 end
