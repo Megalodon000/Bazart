@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   resources :lists, only: [:index, :show, :new, :create, :destroy]
-  resources :chatrooms, only: [:show] do
+  resources :chatrooms, only: [:show, :index] do
     resources :messages, only: [:create]
   end
 

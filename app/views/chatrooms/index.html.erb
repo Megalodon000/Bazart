@@ -1,0 +1,19 @@
+<div id="chat" class="container">
+
+<% @chatrooms.each do |chatroom| %>
+    <%= link_to chatroom_path(chatroom) do %>
+      <% artisan = User.find(chatroom.artisan_id) %>
+
+      <div class="notification">
+  <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
+  <div class="notification-content">
+    <p> <%= artisan.first_name %></p>
+    <p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit.</p>
+
+    <% end %>
+    </div>
+    </div>
+<% end %>
+
+
+</div>
