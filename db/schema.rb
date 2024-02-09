@@ -11,10 +11,14 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema[7.1].define(version: 2024_02_07_132734) do
 =======
 ActiveRecord::Schema[7.1].define(version: 2024_02_06_082327) do
 >>>>>>> f21142e85bbf6482024d0c0af278da2c7e7400b5
+=======
+ActiveRecord::Schema[7.1].define(version: 2024_02_09_120011) do
+>>>>>>> e37754df70e9b768f1c8ce16fa7e90a53f6cb274
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -50,6 +54,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_06_082327) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
+=======
+    t.integer "artisan_id"
+    t.integer "client_id"
+>>>>>>> e37754df70e9b768f1c8ce16fa7e90a53f6cb274
   end
 
   create_table "lists", force: :cascade do |t|
@@ -100,6 +109,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_06_082327) do
     t.string "last_name"
     t.string "address"
     t.string "phone_number"
+    t.float "latitude"
+    t.float "longitude"
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -107,11 +118,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_06_082327) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
 <<<<<<< HEAD
+<<<<<<< HEAD
     t.string "nickname"
 =======
     t.float "latitude"
     t.float "longitude"
 >>>>>>> f21142e85bbf6482024d0c0af278da2c7e7400b5
+=======
+    t.string "nickname"
+>>>>>>> e37754df70e9b768f1c8ce16fa7e90a53f6cb274
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :owner_products, foreign_key: "craftman_id"
   has_many :lists, foreign_key: "client_id"
   has_many :client_products, through: :lists
-
+  has_many :messages, dependent: :destroy
   has_one_attached :photo
 
   geocoded_by :address
