@@ -4,6 +4,7 @@
   gap: 24px;
   flex-wrap: wrap;
 
+
 .card-trip {
   overflow: hidden;
   background: white;
@@ -21,12 +22,14 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  
 }
 
 .card-trip p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
+  width: 75%;
 }
 
 
@@ -55,7 +58,7 @@
     font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
     font-size: 18px;
     color: #60666d;
-    width: 75px;
+    width: 100px;
     border: 1px solid #ccc
 }
 

@@ -99,7 +99,7 @@ attach_image(user3, 'https://source.unsplash.com/300x300/?portrait')
     color: color_select,
     craftman_id: User.all.sample.id
   )
-  attach_image(p, "https://source.unsplash.com/random/900%C3%97700/?product")
+  attach_image(p, "https://source.unsplash.com/random/?artisan")
 end
 
 puts 'Seed data has been created successfully.'

@@ -1,19 +1,20 @@
+
 <div id="chat" class="container">
-
-<% @chatrooms.each do |chatroom| %>
+  <% @chatrooms.each do |chatroom| %>
+    <% artisan = User.find(chatroom.artisan_id) %>
+    <% last_message = chatroom.messages.last %>
     <%= link_to chatroom_path(chatroom) do %>
-      <% artisan = User.find(chatroom.artisan_id) %>
-
       <div class="notification">
-  <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
-  <div class="notification-content">
-    <p> <%= artisan.first_name %></p>
-    <p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit.</p>
-
+        <%= cl_image_tag artisan.photo.key, class: "avatar-large" %>
+        <div class="notification-content">
+          <p class="text-dark"><%= artisan.first_name  %></p>
+          <% if last_message %>
+            <p><%= last_message.content %></p>
+          <% else %>
+            <p>No messages yet.</p>
+          <% end %>
+        </div>
+      </div>
     <% end %>
-    </div>
-    </div>
-<% end %>
-
-
+  <% end %>
 </div>

@@ -1,11 +1,14 @@
 
 <div class="container">
-<div class="d-flex justify-content-end  ">
+<div class="d-flex justify-content-center  ">
 
 <%= form_tag(products_path, method: "get", class:"d-flex align-items-center") do %>
-  <%= select_tag :collection, options_for_select(Product.pluck(:collection).uniq, params[:collection]), include_blank: true, class:"select" %>
-  <%= select_tag :material, options_for_select(Product.pluck(:material).uniq, params[:material]), include_blank: true, class:"select" %>
-  <%= select_tag :color, options_for_select(Product.pluck(:color).uniq, params[:color]), include_blank: true, class:"select" %>
+
+  <%= select_tag :collection, options_for_select([["Collection", ""]].concat(Product.pluck(:collection).uniq.map { |collection| [collection, collection] }), params[:collection]), class: "select" %>
+
+<%= select_tag :material, options_for_select([["Material", ""]].concat(Product.pluck(:material).uniq.map { |material| [material, material] }), params[:material]), class: "select" %>
+
+<%= select_tag :color, options_for_select([["Color", ""]].concat(Product.pluck(:color).uniq.map { |color| [color, color] }), params[:color]), class: "select" %>
   <%= submit_tag "Filter" , class:"button-6 m-2" %>
   <% if current_user %>
 <%= link_to "Add Product", new_product_path(@product), class:"button-6 mr-5" %>
@@ -24,7 +27,8 @@
       <h2><%= product.title %></h2>
       <p><%= product.description %></p>
     </div>
-    <h2 class="card-trip-pricing"><%= product.price %> dh </h2>
+
+    <h2 class="card-trip-pricing "><div class="d-flex"><%= product.price %> <h2>    Dh</h2> </div></h2>
     <%= cl_image_tag product.craftman.photo.key, class: "card-trip-user avatar-bordered" %>
     </div>
 
