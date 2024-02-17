@@ -87,7 +87,7 @@ attach_image(user3, 'https://source.unsplash.com/300x300/?portrait')
 
 
 # Generate 10 Products
-10.times do |i|
+30.times do |i|
   puts "Creating product #{i + 1}"
 
   p = Product.create(
